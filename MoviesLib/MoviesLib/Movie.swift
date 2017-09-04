@@ -14,7 +14,20 @@ class Movie {
     var summary: String
     var duration: String
     var imageName: String
-    var catefories: [String] = []
+    var categories: [String] = []
+    
+    var imageSmall: String {
+        return imageName + "-small.jpg"
+    }
+    
+    
+    var imageWIDE: String {
+        return imageName + "-wide.jpg"
+    }
+    
+    var categoriesDescription: String {
+        return categories.reduce("", {"\($0) | \($1)"} )
+    }
     
     init(title: String, rating: Double, summary: String, duration: String, imageName: String){
         self.title = title

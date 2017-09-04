@@ -10,27 +10,49 @@ import UIKit
 
 class MoviesTableTableViewController: UITableViewController {
 
+    var movies: [Movie] = []
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        loadLocalJSON()
+    }
+    
+    func loadLocalJSON(){
+        if let jsonURL = Bundle.main.url(forResource: "movies", withExtension: "json"){
+            let data = try! Data(contentsOf: jsonURL)
+            let json = try! JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions()) as! [[String:Any]]
+            
+            for item in json {
+                let title = item["title"] as! String
+                let duration = item["duration"] as! String
+                let summary = item["summary"] as! String
+                let imageName = item["image_name"] as! String
+                let rating = item["rating"] as! Double
+                let categories = item["categories"] as! [String]
+                
+                let movie = Movie(title: title, rating: rating, summary:summary, duration: duration, imageName: imageName)
+                movie.categories = categories
+                
+                movies.append(movie)
+                
+            }
+            
+            
+        }
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
     // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
+// quando for 1 pode excluir essa parte q por padrao vem 1
+//    override func numberOfSections(in tableView: UITableView) -> Int {
+//        // #warning Incomplete implementation, return the number of sections
+//        return 1
+//    }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
