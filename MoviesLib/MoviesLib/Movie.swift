@@ -21,7 +21,7 @@ class Movie {
     }
     
     
-    var imageWIDE: String {
+    var imageWide: String {
         return imageName + "-wide.jpg"
     }
     

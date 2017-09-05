@@ -35,11 +35,18 @@ class MoviesTableTableViewController: UITableViewController {
                 movie.categories = categories
                 
                 movies.append(movie)
+                movies.sort(by: { $1.rating > $0.rating } )
                 
             }
             
             
         }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let vc = segue.destination as! MovieViewController
+        let movie = movies[tableView.indexPathForSelectedRow!.row]
+        vc.movie = movie
     }
 
     override func didReceiveMemoryWarning() {
@@ -74,6 +81,9 @@ class MoviesTableTableViewController: UITableViewController {
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("selecionou a linha \(indexPath)")
+    }
 
     /*
     // Override to support conditional editing of the table view.
