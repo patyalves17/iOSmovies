@@ -41,6 +41,7 @@
 		AC4AC1231F5E106D002CFE32 /* suicidesquad-wide.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AC4AC1091F5E106D002CFE32 /* suicidesquad-wide.jpg */; };
 		AC4AC1241F5E106D002CFE32 /* sully-small.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AC4AC10A1F5E106D002CFE32 /* sully-small.jpg */; };
 		AC4AC1251F5E106D002CFE32 /* sully-wide.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AC4AC10B1F5E106D002CFE32 /* sully-wide.jpg */; };
+		AC4AC1271F5E3258002CFE32 /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4AC1261F5E3258002CFE32 /* MovieTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,6 +81,7 @@
 		AC4AC1091F5E106D002CFE32 /* suicidesquad-wide.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "suicidesquad-wide.jpg"; sourceTree = "<group>"; };
 		AC4AC10A1F5E106D002CFE32 /* sully-small.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "sully-small.jpg"; sourceTree = "<group>"; };
 		AC4AC10B1F5E106D002CFE32 /* sully-wide.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "sully-wide.jpg"; sourceTree = "<group>"; };
+		AC4AC1261F5E3258002CFE32 /* MovieTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +118,7 @@
 				07780D4C1E6D860E00BC3630 /* AppDelegate.swift */,
 				07780D4E1E6D860E00BC3630 /* MovieViewController.swift */,
 				07780D501E6D860E00BC3630 /* Main.storyboard */,
+				AC4AC1261F5E3258002CFE32 /* MovieTableViewCell.swift */,
 				07780D531E6D860E00BC3630 /* Assets.xcassets */,
 				AC4AC0ED1F5E0E03002CFE32 /* movies.json */,
 				07780D551E6D860E00BC3630 /* LaunchScreen.storyboard */,
@@ -258,6 +261,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC4AC1271F5E3258002CFE32 /* MovieTableViewCell.swift in Sources */,
 				07780D4F1E6D860E00BC3630 /* MovieViewController.swift in Sources */,
 				AC4AC0EC1F5E0BD9002CFE32 /* MoviesTableTableViewController.swift in Sources */,
 				AC4AC0F01F5E0E76002CFE32 /* Movie.swift in Sources */,

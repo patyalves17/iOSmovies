@@ -72,12 +72,17 @@ class MoviesTableTableViewController: UITableViewController {
        // var identifier: String = indexPath.row == 2 ? "bannercell" : "cell"
         //let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath)
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! MovieTableViewCell
         
         let movie = movies[indexPath.row]
         
-        cell.textLabel?.text=movie.title
-        cell.detailTextLabel?.text = "⭐\(movie.rating)/10"
+        cell.ivPoster.image = UIImage(named: movie.imageSmall)
+        cell.lbTitle.text = movie.title
+        cell.lbSummary.text = movie.summary
+        cell.lbRating.text = "⭐️ \(movie.rating)/10"
+        
+        //cell.textLabel?.text=movie.title
+        //cell.detailTextLabel?.text = "⭐\(movie.rating)/10"
         return cell
     }
     
