@@ -31,7 +31,7 @@ class MoviesTableTableViewController: UITableViewController {
                 let rating = item["rating"] as! Double
                 let categories = item["categories"] as! [String]
                 
-                let movie = Movie(title: title, rating: rating, summary:summary, duration: duration, imageName: imageName)
+                let movie = Movie(title: title, rating: rating, summary: summary, duration: duration, imageName: imageName)
                 movie.categories = categories
                 
                 movies.append(movie)
@@ -49,25 +49,31 @@ class MoviesTableTableViewController: UITableViewController {
     // MARK: - Table view data source
 
 // quando for 1 pode excluir essa parte q por padrao vem 1
-//    override func numberOfSections(in tableView: UITableView) -> Int {
-//        // #warning Incomplete implementation, return the number of sections
-//        return 1
-//    }
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        // #warning Incomplete implementation, return the number of sections
+        return 1
+    }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return movies.count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
+        
+       // var identifier: String = indexPath.row == 2 ? "bannercell" : "cell"
+        //let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath)
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        
+        let movie = movies[indexPath.row]
+        
+        cell.textLabel?.text=movie.title
+        cell.detailTextLabel?.text = "⭐\(movie.rating)/10"
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.
