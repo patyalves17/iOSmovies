@@ -65,7 +65,8 @@
                                         <constraint firstAttribute="bottom" secondItem="7fF-by-RrR" secondAttribute="bottom" constant="10" id="Jyy-xv-syg"/>
                                         <constraint firstItem="HHL-gu-0LI" firstAttribute="leading" secondItem="6Ct-qk-2Uj" secondAttribute="trailing" constant="14" id="UWi-id-ysy"/>
                                         <constraint firstAttribute="trailing" secondItem="HHL-gu-0LI" secondAttribute="trailing" constant="10" id="WV2-bk-i0y"/>
-                                        <constraint firstItem="7fF-by-RrR" firstAttribute="top" secondItem="lPg-V7-qK4" secondAttribute="bottom" priority="250" constant="25.5" id="YKg-A7-xhE"/>
+                                        <constraint firstItem="7fF-by-RrR" firstAttribute="top" secondItem="lPg-V7-qK4" secondAttribute="bottom" priority="250" constant="6" id="YKg-A7-xhE"/>
+                                        <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="6Ct-qk-2Uj" secondAttribute="bottom" constant="19" id="ZSf-Tf-Z2K"/>
                                         <constraint firstItem="lPg-V7-qK4" firstAttribute="top" secondItem="HHL-gu-0LI" secondAttribute="bottom" constant="6" id="aKY-Aa-X7X"/>
                                         <constraint firstItem="7fF-by-RrR" firstAttribute="leading" secondItem="6Ct-qk-2Uj" secondAttribute="trailing" constant="14" id="fuI-86-b72"/>
                                         <constraint firstItem="6Ct-qk-2Uj" firstAttribute="leading" secondItem="O9v-eU-ZOQ" secondAttribute="leading" constant="12" id="gvD-LY-iMI"/>
